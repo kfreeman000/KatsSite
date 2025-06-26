@@ -1,0 +1,28 @@
+
+
+
+h1  {
+    color: blue;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: Copperplate, serif;
+}
+
+
+nav ul{
+    display: flex;
+    font-size: 25px;
+    color: blue;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Copperplate, serif;
+    list-style-type: none;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+main {
+    display:ruby;
+
+}
+
