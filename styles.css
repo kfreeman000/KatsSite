@@ -1,8 +1,7 @@
 
 
-
 h1  {
-    color: blue;
+    color: white;
     justify-content: flex-start;
     align-items: flex-start;
     font-family: Copperplate, serif;
@@ -12,7 +11,7 @@ h1  {
 nav ul{
     display: flex;
     font-size: 25px;
-    color: blue;
+    color: white;
     align-items: center;
     justify-content: space-around;
     font-family: Copperplate, serif;
@@ -22,7 +21,59 @@ nav ul{
 }
 
 main {
-    display:ruby;
+    display:block;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background for the box */
+    border-radius: 15px; /* Slightly rounded corners for the box */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* The shadow effect */
+    backdrop-filter: blur(4px); /* Optional: Adds a subtle blur to content *behind* this box (like the ripple) */
+    -webkit-backdrop-filter: blur(4px); /* For Safari support */
+    max-width: 960px; /* Limit the maximum width of your content box for readability */
+    margin: 20px auto; /* Center the box horizontally and add some top/bottom margin */
 
 }
 
+body {
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Your nice background gradient */
+    min-height: 100vh; /* Ensure background covers full height */
+    margin: 0; /* Remove default body margin */
+    overflow-x: hidden; /* Prevent horizontal scrollbar if ripple goes off screen */
+    color: #fff; /* Default text color for contrast */
+    font-family: Arial, sans-serif; /* A basic default font */
+}
+
+
+/* Our single ripple element */
+#ripple {
+    position: fixed; /* Stays relative to the viewport */
+    /* Set width/height using a CSS variable */
+    width: var(--ripple-size, 0); /* Default to 0 if not set */
+    height: var(--ripple-size, 0); /* Default to 0 if not set */
+    border-radius: 50%; /* Make it a circle */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    /* Use CSS variables for position, set by JS. Transform handles centering. */
+    left: var(--ripple-x, 0); /* Default to 0 if not set */
+    top: var(--ripple-y, 0); /* Default to 0 if not set */
+
+    transform: translate(-50%, -50%) scale(0); /* Start centered and invisible */
+    pointer-events: none; /* Crucial: allows mouse events to pass through to elements beneath */
+    z-index: -1; /* Puts it behind all other content on the page */
+
+    /* Define animation properties (will be triggered by JS) */
+    opacity: 0; /* Starts hidden */
+    animation-duration: 0.7s; /* How long the ripple effect lasts */
+    animation-timing-function: ease-out; /* Makes it start fast and slow down */
+    animation-fill-mode: forwards; /* Stays at the end state of animation */
+    /* The animation-name will be applied by JS */
+}
+
+/* The animation definition */
+@keyframes rippleEffect {
+    0% {
+        transform: translate(-50%, -50%) scale(0); /* Start small and centered */
+        opacity: 0.5; /* Start visible */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1); /* Expand to full size */
+        opacity: 0; /* Fade out */
+    }
+}    
