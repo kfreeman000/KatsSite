@@ -13,9 +13,11 @@ a:visited {
 }
 
 footer {
-    position:fixed;
-    bottom: 20px;    /* 20px from the bottom of the viewport */
-    left: 20px;     /* 20px from the right of the viewport */
+    position:absolute;
+    bottom: 10px;   
+    left: 20px;  
+    padding-top: 30px;
+       
 }
 
 #contact {
@@ -50,9 +52,6 @@ nav ul {
     margin: 20px auto; /* Center the box horizontally and add some top/bottom margin */
 }
 
-#github {
-
-}
 
 main {
     display:block;
@@ -110,6 +109,13 @@ body {
     }
 }   
 
+.job-card-container {
+    display: flex; 
+    justify-content: space-around;
+    padding-bottom: 30px;
+
+}
+
 .flip-card {
     padding-top: 50px;
     width: 300px; 
@@ -145,18 +151,19 @@ body {
 }
 
 .flip-card-front {
-    background-color: #f0f0f0; /* Light background for the front */
-    color: #333; /* Dark text for contrast */
-    /* Add other specific styles for the front */
+    background-color: white;
+    color: blue; 
+    font-family: Copperplate, serif;
 }
 
 .flip-card-back {
-    background-color: #2575fc; /* Blue background for the back */
-    color: white; /* White text for the back */
+    background-color: white;
+    color: blue; /* White text for the back */
     transform: rotateY(180deg); /* CRITICAL: Initially rotate the back face so it's hidden from view */
     /* This makes the back start "flipped away". When the inner card rotates 180deg, this side comes into view. */
     /* Add other specific styles for the back */
-    text-align: left; /* Adjust text alignment for job description */
+    text-align:center;
+    font-family: Copperplate, serif;
 }
 
 .flip-card:hover .flip-card-inner {
