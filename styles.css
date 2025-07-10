@@ -8,8 +8,26 @@ h1  {
     padding-left: 20px;
 }
 
+a:visited {
+    color: white; /* Forces visited links to stay white */
+}
+
+footer {
+    position:fixed;
+    bottom: 20px;    /* 20px from the bottom of the viewport */
+    left: 20px;     /* 20px from the right of the viewport */
+}
+
 #contact {
     text-align: center;
+}
+
+#resume {
+    display: flex;
+    font-family: Copperplate, serif;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 30px;
 }
 
 
@@ -90,4 +108,57 @@ body {
         transform: translate(-50%, -50%) scale(1); /* Expand to full size */
         opacity: 0; /* Fade out */
     }
-}    
+}   
+
+.flip-card {
+    padding-top: 50px;
+    width: 300px; 
+    height: 400px; 
+    perspective: 1000px; /* Creates the 3D viewing distance */
+}
+
+.flip-card-inner {
+    position: relative; /* Needed for absolute positioning of front/back children */
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Centers content horizontally within the inner card */
+    transition: transform 0.8s; /* Makes the rotation smooth over 0.8 seconds */
+    transform-style: preserve-3d; /* CRITICAL: Tells the browser to render children (front/back) in 3D space, not flatten them */
+    /* Without 'preserve-3d', the front and back would just sit flat on top of each other and wouldn't look like a true flip. */
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute; /* Makes them overlap perfectly inside .flip-card-inner */
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* For Safari */
+    backface-visibility: hidden; /* CRITICAL: Hides the "back" of an element when it's facing away from the viewer */
+    /* Without this, when you flip, you'd see the text from the other side showing through. */
+    /* Add your background-color, text-color, padding, etc., for each side here */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width/height */
+    border-radius: 10px; /* Match outer card for consistent corners */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front {
+    background-color: #f0f0f0; /* Light background for the front */
+    color: #333; /* Dark text for contrast */
+    /* Add other specific styles for the front */
+}
+
+.flip-card-back {
+    background-color: #2575fc; /* Blue background for the back */
+    color: white; /* White text for the back */
+    transform: rotateY(180deg); /* CRITICAL: Initially rotate the back face so it's hidden from view */
+    /* This makes the back start "flipped away". When the inner card rotates 180deg, this side comes into view. */
+    /* Add other specific styles for the back */
+    text-align: left; /* Adjust text alignment for job description */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* When the outer card is hovered, rotate the inner card 180 degrees */
+}
