@@ -2,8 +2,6 @@
 
 h1  {
     color: white;
-    justify-content: flex-start;
-    align-items: flex-start;
     font-family: Copperplate, serif;
     padding-left: 20px;
 }
@@ -13,10 +11,11 @@ a:visited {
 }
 
 footer {
-    position:absolute;
-    bottom: 10px;   
-    left: 20px;  
+    margin-top: auto; /* Pushes footer to the bottom in a flex column */
+    margin-left: auto; /* Pushes footer to the right in a flex column */
+    text-align: right; /* Aligns content *within* the footer to the right */
     padding-top: 30px;
+    padding-right: 30px;
        
 }
 
@@ -31,6 +30,7 @@ footer {
     align-items: center;
     padding-bottom: 30px;
 }
+
 
 
 nav ul {
@@ -54,7 +54,7 @@ nav ul {
 
 
 main {
-    display:block;
+    display: block;
     background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background for the box */
     border-radius: 15px; /* Slightly rounded corners for the box */
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* The shadow effect */
@@ -63,6 +63,7 @@ main {
     max-width: 960px; /* Limit the maximum width of your content box for readability */
     margin: 20px auto; /* Center the box horizontally and add some top/bottom margin */
     padding: 20px;
+    flex-grow: 1;
 
 }
 
@@ -111,22 +112,23 @@ body {
 
 .job-card-container {
     display: flex; 
-    justify-content: space-around;
-    padding-bottom: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
 
 }
 
 .flip-card {
-    padding-top: 50px;
+    padding: 50px;
     width: 300px; 
     height: 400px; 
     perspective: 1000px; /* Creates the 3D viewing distance */
 }
 
 .flip-card-inner {
-    position: relative; /* Needed for absolute positioning of front/back children */
-    width: 100%;
+    position: relative; 
     height: 100%;
+    width: 100%;
     text-align: center; /* Centers content horizontally within the inner card */
     transition: transform 0.8s; /* Makes the rotation smooth over 0.8 seconds */
     transform-style: preserve-3d; /* CRITICAL: Tells the browser to render children (front/back) in 3D space, not flatten them */
@@ -138,16 +140,14 @@ body {
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; /* For Safari */
-    backface-visibility: hidden; /* CRITICAL: Hides the "back" of an element when it's facing away from the viewer */
-    /* Without this, when you flip, you'd see the text from the other side showing through. */
-    /* Add your background-color, text-color, padding, etc., for each side here */
-    padding: 20px;
+    backface-visibility: hidden; 
     box-sizing: border-box; /* Include padding in width/height */
     border-radius: 10px; /* Match outer card for consistent corners */
     display: flex; /* Use flexbox to center content */
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    
 }
 
 .flip-card-front {
@@ -160,12 +160,45 @@ body {
     background-color: white;
     color: blue; /* White text for the back */
     transform: rotateY(180deg); /* CRITICAL: Initially rotate the back face so it's hidden from view */
-    /* This makes the back start "flipped away". When the inner card rotates 180deg, this side comes into view. */
-    /* Add other specific styles for the back */
-    text-align:center;
-    font-family: Copperplate, serif;
+    text-align: center;
+    
 }
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg); /* When the outer card is hovered, rotate the inner card 180 degrees */
 }
+
+.images {
+     margin-top: 60px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+
+    display: grid; /* Use Grid for a responsive multi-column layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit columns, min 300px, max 1fr */
+    gap: 30px; /* Space between gallery items */
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center image and text horizontally within the item */
+    background: transparent; /* Make this transparent so the P tag's background shows */
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: none;
+    text-align: center;
+}
+
+#ai {
+    padding-right: 50px;
+}
+
+

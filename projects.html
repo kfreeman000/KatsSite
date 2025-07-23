@@ -4,9 +4,10 @@
         Projects
     </title>
     <link rel="stylesheet" href="styles.css">
-    <script src="kat.js"></script>
+    <script src="kat.js" defer></script>
 
     <body>
+        <div id="ripple"></div>
         <nav>
             <ul>
                 <li><a href ="experience.html">experience</a></li>
@@ -16,9 +17,32 @@
             </ul>
         </nav>
 
-        <img src="pix/KS_openai.jpg" width="300" height="300">
-        <img src="pix/KS_react.png" width="300" height="300">
-        <img src="pix/KS_unity.avif" width="350" height="300">
+        <div class="images">
+
+        <div class="gallery-item">
+                        <p><h1>Mr. Kitty Site</h1></p>
+                        <img src="pix/KS_openai.jpg" alt="AI Project Thumbnail" width="300">
+                        <p>With what started as a basic web page, I added OpenAI's API and trainied a chatbot called SmartKit.
+                           This project allowed me to deepen my understanding of API's as well as OpenAI itself. The whole site involves
+                           HTML, CSS, Python(for Flask), and Javascript. 
+                        </p>   
+        </div>
+
+        <div class="gallery-item">
+                        <p><h1>LiftOff</h1></p>
+                        <img src="pix/KS_react.png" alt="React Project Thumbnail">
+                        <p>A dynamic mobile app built in React Native. This was my first real group project. LiftOff is all about motivation and quantitive
+                           data. You can track your workouts by specifying the type of workout, the weight, and number of reps. By submitting this data, you are subject
+                           to reciving "rewards" like little tokens to incentivize continuing to track. We use FireBase for data management. 
+                           </p> 
+        </div>
+
+        <div class="gallery-item">
+                        <p><h1>Overgrown</h1></p>
+                        <img src="pix/KS_unity.avif" alt="Unity Project Thumbnail" width="600">
+                        <p>Developed a small interactive game using Unity, focusing on 3D environment design, basic physics, and C# scripting for game logic. This highlights my interest in game development.</p>
+        </div>
+        </div>
 
         <footer>
             © 2025 Katherine Freeman | coded and deployed by me 🐱 and GitHub Pages 
