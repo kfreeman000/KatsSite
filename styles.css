@@ -1,12 +1,15 @@
 
 
-h1  {
+h1, h2, h3  {
     color: white;
     font-family: Copperplate, serif;
     padding-left: 20px;
 }
 
 a:visited {
+    color: white; /* Forces visited links to stay white */
+}
+a:hover {
     color: white; /* Forces visited links to stay white */
 }
 
