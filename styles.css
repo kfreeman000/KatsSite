@@ -13,6 +13,59 @@ a:active {
     color: white
 }
 
+.homeBottom {
+    align-items: center;
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.homeBottomNav {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: rgba(255, 255, 255, 0.4); 
+    border-radius: 15px; /* Slightly rounded corners for the box */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* The shadow effect */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); /* For Safari support */
+    max-width: 960px; /* Limit the maximum width of your content box for readability */
+    margin: 20px auto; /* Center the box horizontally and add some top/bottom margin */
+}
+
+.homeBottomNav2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgba(255, 255, 255, 0.4); 
+    border-radius: 15px; /* Slightly rounded corners for the box */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* The shadow effect */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); /* For Safari support */
+    max-width: 960px; /* Limit the maximum width of your content box for readability */
+    margin: 20px auto; /* Center the box horizontally and add some top/bottom margin */
+}
+
+
+
+#homeBottomLinks {
+    text-align: center;
+    color: rgb(6, 6, 92);
+    padding: 30px;
+}
 
 
 footer {
