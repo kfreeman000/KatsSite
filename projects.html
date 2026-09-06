@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>
-        Projects
-    </title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="kat.js" defer></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="kat.js" defer></script>
+    </head>
 
     <body>
+        <div class="space-bg" aria-hidden="true">
+            <canvas id="starfield"></canvas>
+            <div class="nebula nebula-1"></div>
+            <div class="nebula nebula-2"></div>
+            <div class="nebula nebula-3"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="scanlines"></div>
+        </div>
+        <div class="cursor-glow" id="cursor-glow"></div>
         <div id="ripple"></div>
-        <nav>
-            <ul>
-                <li><a href ="experience.html">experience</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="projects.html">projects</a></li>
-                <li><a href="index.html">home</a></li>
-            </ul>
-        </nav>
+
+        <header class="site-header">
+            <a class="logo" href="index.html">KF</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="experience.html">experience</a></li>
+                    <li><a href="projects.html" aria-current="page">projects</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">payloads</p>
+            <h1>Projects</h1>
+            <p class="hero-sub">Things I built, shipped, or still tinker with.</p>
+        </section>
 
         <div class="images">
+            <article class="gallery-item">
+                <h2>Mr. Kitty Site</h2>
+                <img src="pix/KS_openai.jpg" alt="Mr. Kitty and SmartKit project">
+                <p>What started as a basic webpage became SmartKit: a chatbot trained with OpenAI's API. HTML, CSS, JavaScript, and Python (Flask) all live here — a crash course in APIs and conversation design.</p>
+                <p class="repo-link"><a href="https://github.com/kfreeman000/mr.Kitty">view repository</a></p>
+            </article>
 
-        <div class="gallery-item">
-                        <p><h1>Mr. Kitty Site</h1></p>
-                        <img src="pix/KS_openai.jpg" alt="AI Project Thumbnail" width="300">
-                        <p>With what started as a basic web page, I added OpenAI's API and trainied a chatbot called SmartKit.
-                           This project allowed me to deepen my understanding of API's as well as OpenAI itself. The whole site involves
-                           HTML, CSS, Python(for Flask), and Javascript. 
-                        </p>
-                        <p><strong>check it: </strong><a href="https://github.com/kfreeman000/mr.Kitty">repository</a></p>   
-        </div>
+            <article class="gallery-item">
+                <h2>LiftOff</h2>
+                <img src="pix/KS_react.png" alt="LiftOff React Native app">
+                <p><a href="https://apps.apple.com/us/app/liftoff-compound-tracker/id6763985634">Download on the App Store</a></p>
+                <p>A React Native workout tracker that grew from a class project into the thing I have worked hardest on. Log type, weight, and reps. Earn little achievement tokens for showing up. Firebase holds the data.</p>
+                <p class="repo-link"><a href="https://github.com/kfreeman000/LiftOff">view repository</a></p>
+            </article>
 
-        <div class="gallery-item">
-                        <p><h1>LiftOff</h1></p>
-                        <img src="pix/KS_react.png" alt="React Project Thumbnail">
-                        <p><a href="https://apps.apple.com/us/app/liftoff-compound-tracker/id6763985634">DOWNLOAD LIFTOFF HERE</a>
-                            <br>
-                            A dynamic mobile app built in React Native. What started as a small project in my 
-                            mobile dev class, has since become what I have worked hardest and most on. LiftOff is all about motivation and quantitive
-                           data. You can track your workouts by specifying the type of workout, the weight, and number of reps. By submitting this data, you are subject
-                           to reciving achievements like little tokens to incentivize continuing to track. I use FireBase for data management. 
-                        </p> 
-                        <p><strong>check it: </strong><a href="https://github.com/kfreeman000/LiftOff">repository</a></p>
-        </div>
-
-        <div class="gallery-item">
-                        <p><h1>Overgrown</h1></p>
-                        <img src="pix/KS_unity.avif" alt="Unity Project Thumbnail" width="600">
-                        <p>Developed a small interactive game using Unity, focusing on 3D environment design, basic physics, and C# scripting for game logic. This highlights my interest in game development.</p>
-                        <p><strong>check it: </strong><a href="https://github.com/kfreeman000/Overgrown">repository</a></p>   
-        </div>
+            <article class="gallery-item">
+                <h2>Overgrown</h2>
+                <img src="pix/KS_unity.avif" alt="Overgrown Unity game">
+                <p>A small interactive Unity game: 3D spaces, basic physics, and C# for the logic. Proof that I like worlds you can walk through, not just pages you can scroll.</p>
+                <p class="repo-link"><a href="https://github.com/kfreeman000/Overgrown">view repository</a></p>
+            </article>
         </div>
 
         <footer>
-            © 2026 Katherine Freeman | coded and deployed by me 🐱 and GitHub Pages 
+            © 2026 Katherine Freeman · coded and deployed by me 🐱 and GitHub Pages
         </footer>
-        
     </body>
 </html>

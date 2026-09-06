@@ -1,57 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Katherine Freeman</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <script src="kat.js" defer></script>
-        <title>
-            Katherine Freeman
-        </title>
     </head>
 
-    <body>
+    <body class="page-home">
+        <div class="space-bg" aria-hidden="true">
+            <canvas id="starfield"></canvas>
+            <div class="nebula nebula-1"></div>
+            <div class="nebula nebula-2"></div>
+            <div class="nebula nebula-3"></div>
+            <div class="planet"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="scanlines"></div>
+        </div>
+        <div class="cursor-glow" id="cursor-glow"></div>
         <div id="ripple"></div>
 
-        <h1>Thanks for dropping in. Take a look around.</h1>
-    
-    
-        <nav>
-            <ul>
-                <li><a href ="experience.html">experience</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="projects.html">projects</a></li>
-                <li><a href="index.html">home</a></li>
-            </ul>
-        </nav>
+        <header class="site-header">
+            <a class="logo" href="index.html">KF</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" aria-current="page">home</a></li>
+                    <li><a href="experience.html">experience</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">Katherine Freeman · software</p>
+            <h1>Thanks for dropping in.</h1>
+            <p class="hero-sub">Take a look around — this orbit is all mine.</p>
+        </section>
+
         <main>
-    My name is <strong>Katherine Freeman.</strong> I am 23 years old and have recently completed my B.S. in computer science and more recently shipped
-    my first ever ios application! I embarked on my journey at Ithaca College studying exercise science with a minor
-    in computer science, but soon switched the two around. I quickly fell in love with writing scripts and making
-    my code come to life, so I made computer science my major and never looked back. My love for exercise has never dithered;
-    in fact my first shipped mobile application <a href="projects.html">LiftOff</a>, is an app that combined my two interests by creating
-    a fun user experience with tracking your weights during a workout. 
-    While I would love to be in mobile development, I have developed full-stack and web development
-    skills from continuing to maintain my projects outside of the classroom.
-    I am also extremely curious about all things AI and gained insight into agent workflows from my time at NeauralSeek.
-    I encourage you to explore my other <a href="projects.html">projects</a> 
-    
+            <div class="bio-grid">
+                <p class="lead">I'm <strong>Katherine Freeman</strong>. I'm 23, freshly graduated with a B.S. in computer science, and I just shipped my first iOS app.</p>
+                <p>I started at Ithaca College in exercise science with a CS minor, then flipped the two. Writing scripts and watching code come alive stuck. Movement never left the picture: my first shipped app, <a href="projects.html">LiftOff</a>, is a workout tracker at that exact intersection.</p>
+                <p>Mobile is the work I want most, and I've also grown full-stack and web skills by keeping projects alive outside class. I'm endlessly curious about AI, and I got a closer look at agent workflows during my time at NeuralSeek.</p>
+                <p>I'm passionate about veganism, animal welfare, and exercise. Dream work is tech for climate, animals, or people — something that helps more than it takes.</p>
+                <div class="signal-row">
+                    <span class="chip">iOS · LiftOff</span>
+                    <span class="chip">full-stack</span>
+                    <span class="chip">AI curious</span>
+                    <span class="chip">climate + animals</span>
+                </div>
+            </div>
         </main>
 
-        
-    <div class="homeBottom"> 
-        <nav class="homeBottomNav">
-            <a id="homeBottomLinks" href="https://apps.apple.com/us/app/liftoff-compound-tracker/id6763985634">MY APP IS NOW LIVE 🎉</a>
-        </nav>
-
-        <nav class="homeBottomNav2">
-            
-            <a id="homeBottomLinks" href="https://www.linkedin.com/in/katherine-freeman-6517632a5/">Linkedin</a>
-            <a id="homeBottomLinks" href=https://github.com/kfreeman000>Github</a>
-            
-        </nav>
-    </div>
+        <div class="orbit-links">
+            <nav class="homeBottomNav">
+                <p class="card-label">now transmitting</p>
+                <a class="app-live" href="https://apps.apple.com/us/app/liftoff-compound-tracker/id6763985634">LiftOff is live on the App Store</a>
+            </nav>
+            <nav class="homeBottomNav2">
+                <p class="card-label">ground links</p>
+                <a class="social-link" href="https://www.linkedin.com/in/katherine-freeman-6517632a5/">LinkedIn</a>
+                <a class="social-link" href="https://github.com/kfreeman000">GitHub</a>
+            </nav>
+        </div>
 
         <footer>
-            © 2026 Katherine Freeman | coded and deployed by me 🐱 and GitHub Pages 
+            © 2026 Katherine Freeman · coded and deployed by me 🐱 and GitHub Pages
         </footer>
-    </body>    
+    </body>
 </html>

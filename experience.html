@@ -1,104 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Experience</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="kat.js" defer></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experience</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="kat.js" defer></script>
+    </head>
 
     <body>
+        <div class="space-bg" aria-hidden="true">
+            <canvas id="starfield"></canvas>
+            <div class="nebula nebula-1"></div>
+            <div class="nebula nebula-2"></div>
+            <div class="nebula nebula-3"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="scanlines"></div>
+        </div>
+        <div class="cursor-glow" id="cursor-glow"></div>
         <div id="ripple"></div>
-        <nav>
-            <ul>
-                <li><a href ="experience.html">experience</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="projects.html">projects</a></li>
-                <li><a href="index.html">home</a></li>
-            </ul>
-        </nav>
+
+        <header class="site-header">
+            <a class="logo" href="index.html">KF</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="experience.html" aria-current="page">experience</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">log · missions</p>
+            <h1>Experience</h1>
+            <p class="hero-sub">Flip a card to see dates, place, and a link.</p>
+        </section>
 
         <main>
             <a id="resume" href="https://docs.google.com/document/d/1ytxCsG8ihdgLEr_NtthSDeOi2uTfMzrcQeYnT4BLnqY/edit?usp=sharing">official resume</a>
-            My recent endevour of shipping LiftOff has given me real-world experience I have been seeking. As of May 12, 2026, LiftOf was
-            live on Apple AppStore after a year of development. In that year, I became much more comfortable with JavaScript and React Native, 
-            learned about FireBase and authentication systems, and implemented the TestFlight process. Having my product out there, finally tangible,
-            is both my greatest source of experience and what I am proudest of. 
-            
-        
-        <div class="job-card-container">
-                <div class="flip-card">          <!-- 1. The Outer Container (defines 3D perspective) -->
-                    <div class="flip-card-inner">    <!-- 2. The Flipper (this is what actually rotates) -->
-                        <div class="flip-card-front">  <!-- 3. The Front Face -->
-                        Teaching Assistant for Web Development
-                        <p>Ithaca College</p>
+
+            <p class="experience-intro">Shipping LiftOff is the real-world loop I had been looking for. As of May 12, 2026, it is live on the App Store after a year of development. That year made JavaScript and React Native feel like home, taught me Firebase and auth, and walked me through TestFlight. Having a product out in the world — finally tangible — is both my strongest experience and what I am proudest of.</p>
+
+            <div class="job-card-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            Teaching Assistant for Web Development
+                            <p>Ithaca College</p>
                         </div>
-                    <div class="flip-card-back">   
-                    <p>August 2025 - December 2025</p>
-                    <p>Ithaca, New York</p>
-                    <p>
-                        <a href="https://www.coursicle.com/ithaca/courses/COMP/10500/">website</a>
-                    </p>
+                        <div class="flip-card-back">
+                            <p>August 2025 – December 2025</p>
+                            <p>Ithaca, New York</p>
+                            <p><a href="https://www.coursicle.com/ithaca/courses/COMP/10500/">course site</a></p>
+                        </div>
                     </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="job-card-container">
-            <div class="flip-card">          <!-- 1. The Outer Container (defines 3D perspective) -->
-                <div class="flip-card-inner">    <!-- 2. The Flipper (this is what actually rotates) -->
-                    <div class="flip-card-front">  <!-- 3. The Front Face -->
-                    NeuralSeek Intern
-                    <p>NeuralSeek</p>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            NeuralSeek Intern
+                            <p>NeuralSeek</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>August 2025 – September 2025</p>
+                            <p>Remote</p>
+                            <p><a href="https://neuralseek.com/">website</a></p>
+                        </div>
                     </div>
-                <div class="flip-card-back">   
-                <p>August 2025 - September 2025</p>
-                <p>remote</p>
-                <p>
-                    <a href="https://neuralseek.com/">website</a>
-                </p>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            Generative AI Exploration Guide
+                            <p>Ithaca College</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>March 2025 – present</p>
+                            <p>Ithaca, New York</p>
+                            <p><a href="https://www.ithaca.edu/information-technology-and-analytics/artificial-intelligence-ic/ai-exploration-lab">lab site</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            Databases Intern
+                            <p>Island Institute</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>June 2024 – August 2024</p>
+                            <p>Hybrid · Rockland, Maine</p>
+                            <p><a href="https://www.islandinstitute.org/">website</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-      
-            <div class="flip-card">          <!-- 1. The Outer Container (defines 3D perspective) -->
-                <div class="flip-card-inner">    <!-- 2. The Flipper (this is what actually rotates) -->
-                    <div class="flip-card-front">  <!-- 3. The Front Face -->
-                    Generative AI Exploration Guide 
-                    <p>Ithaca College</p>
-                    </div>
-                <div class="flip-card-back">   
-                <p>March 2025 - present</p>
-                <p>Ithaca, New York</p>
-                <p>
-                    <a href="https://www.ithaca.edu/information-technology-and-analytics/artificial-intelligence-ic/ai-exploration-lab">website</a>
-                </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="flip-card">          <!-- 1. The Outer Container (defines 3D perspective) -->
-                <div class="flip-card-inner">    <!-- 2. The Flipper (this is what actually rotates) -->
-                    <div class="flip-card-front">  <!-- 3. The Front Face -->
-                    Databases Intern
-                    <p>Island Institute</p>
-                    </div>
-                <div class="flip-card-back">   
-                <p>June 2024 - August 2024</p>
-                <p>Hybrid out of Rockland, Maine</p>
-                <p>
-                    <a href="https://www.islandinstitute.org/">website</a>
-                </p>
-                </div>
-            </div>
-        </div>
-        </div>
-  
-
         </main>
 
         <footer>
-            © 2026 Katherine Freeman | coded and deployed by me 🐱 and GitHub Pages 
+            © 2026 Katherine Freeman · coded and deployed by me 🐱 and GitHub Pages
         </footer>
-
     </body>
 </html>
